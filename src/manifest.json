@@ -1,16 +1,25 @@
 {
-  "manifest_version": 3,
-  "name": "Chrome tools extension",
-  "version": "1.0",
-  "description": "for myself",
-  "content_scripts": [
-    {
-      "matches": [
-        "*://*.atcoder.jp/contests/*"
-      ],
-      "js": [
-        "content/atcoder.js"
-      ]
-    }
-  ]
+	"manifest_version": 3,
+	"name": "Chrome tools extension",
+	"version": "1.0",
+	"description": "for myself",
+	"icons": {
+		"48": "images/chrome-dev-logo.png"
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://x.com/*", "https://*.x.com/*"],
+			"js": ["content/change_x_to.js"]
+		},
+		{
+			"matches": ["*://*.atcoder.jp/contests/*"],
+			"js": ["content/atcoder.js"]
+		}
+	],
+	"web_accessible_resources": [
+		{
+			"resources": ["/images/*"],
+			"matches": ["<all_urls>"]
+		}
+	]
 }

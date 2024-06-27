@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "npx @biomejs/biome lint src",
-    "check": "npx @biomejs/biome check --write src",
+    "fix": "npx @biomejs/biome check --write src",
     "prepare": "husky"
   },
   "keywords": [],
