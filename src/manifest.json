@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome tools extension",
+  "version": "1.0",
+  "description": "for myself",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.atcoder.jp/contests/*"
+      ],
+      "js": [
+        "content/atcoder.js"
+      ]
+    }
+  ]
+}
