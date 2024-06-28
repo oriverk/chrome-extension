@@ -6,6 +6,7 @@
 	"icons": {
 		"48": "images/chrome-dev-logo.png"
 	},
+	"permissions": ["contextMenus", "activeTab", "scripting", "clipboardWrite"],
 	"content_scripts": [
 		{
 			"matches": ["https://x.com/*", "https://*.x.com/*"],
@@ -16,6 +17,10 @@
 			"js": ["content/atcoder.js"]
 		}
 	],
+	"background": {
+		"service_worker": "background/index.js",
+		"type": "module"
+	},
 	"web_accessible_resources": [
 		{
 			"resources": ["/images/*"],
